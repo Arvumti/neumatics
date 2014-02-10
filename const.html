@@ -3,8 +3,9 @@
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width">
-<title>NEUMATICS TOOLS</title>
-    
+<title>NEUMATIC'S TOOLS</title>
+      
+
   <link href="css/bootstrap.css" rel="stylesheet" media="screen">
   <link href="css/bootstrap-responsive.css" rel="stylesheet" media="screen">
   <link href="css/styles.css" rel="stylesheet" media="screen">
@@ -16,209 +17,19 @@
  <!--ACORDEON ESTILOS -->
  <link rel="stylesheet" href="css/foundation.css">
  <link rel="stylesheet" type="text/css" href="css/example_4.css" />
+  <link rel="shortcut icon" href="img/mis.png">
      <!--[if lt Ie 9]>
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
-  <!-- Add jQuery library -->
- <script type="text/javascript" src="fancybox/lib/jquery-1.9.0.min.js"></script>
-
-  <!-- Add mousewheel plugin (this is optional) -->
-  <script type="text/javascript" src="fancybox/lib/jquery.mousewheel-3.0.6.pack.js"></script>
-
-  <!-- Add fancyBox main JS and CSS files -->
-  <script type="text/javascript" src="fancybox/source/jquery.fancybox.js?v=2.1.4"></script>
-  <link rel="stylesheet" type="text/css" href="fancybox/source/jquery.fancybox.css?v=2.1.4" media="screen" />
-
-  <!-- Add Button helper (this is optional) -->
-  <link rel="stylesheet" type="text/css" href="fancybox/source/helpers/jquery.fancybox-buttons.css?v=1.0.5" />
-  <script type="text/javascript" src="fancybox/source/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
-
-  <script type="text/javascript">
-    $(document).ready(function() {
-      /*
-       *  Simple image gallery. Uses default settings
-       */
-
-      $('.fancybox').fancybox();
-
-      /*
-       *  Different effects
-       */
-
-      // Change title type, overlay closing speed
-      $(".fancybox-effects-a").fancybox({
-        helpers: {
-          title : {
-            type : 'outside'
-          },
-          overlay : {
-            speedOut : 0
-          }
-        }
-      });
-
-      // Disable opening and closing animations, change title type
-      $(".fancybox-effects-b").fancybox({
-        openEffect  : 'none',
-        closeEffect : 'none',
-
-        helpers : {
-          title : {
-            type : 'over'
-          }
-        }
-      });
-
-      // Set custom style, close if clicked, change title type and overlay color
-      $(".fancybox-effects-c").fancybox({
-        wrapCSS    : 'fancybox-custom',
-        closeClick : true,
-
-        openEffect : 'none',
-
-        helpers : {
-          title : {
-            type : 'inside'
-          },
-          overlay : {
-            css : {
-              'background' : 'rgba(238,238,238,0.85)'
-            }
-          }
-        }
-      });
-
-      // Remove padding, set opening and closing animations, close if clicked and disable overlay
-      $(".fancybox-effects-d").fancybox({
-        padding: 0,
-
-        openEffect : 'elastic',
-        openSpeed  : 150,
-
-        closeEffect : 'elastic',
-        closeSpeed  : 150,
-
-        closeClick : true,
-
-        helpers : {
-          overlay : null
-        }
-      });
-
-      /*
-       *  Button helper. Disable animations, hide close button, change title type and content
-       */
-
-      $('.fancybox-buttons').fancybox({
-        openEffect  : 'none',
-        closeEffect : 'none',
-
-        prevEffect : 'none',
-        nextEffect : 'none',
-
-        closeBtn  : false,
-
-        helpers : {
-          title : {
-            type : 'inside'
-          },
-          buttons : {}
-        },
-
-        afterLoad : function() {
-          this.title = 'Image ' + (this.index + 1) + ' of ' + this.group.length + (this.title ? ' - ' + this.title : '');
-        }
-      });
-
-
-      /*
-       *  Thumbnail helper. Disable animations, hide close button, arrows and slide to next gallery item if clicked
-       */
-
-      $('.fancybox-thumbs').fancybox({
-        prevEffect : 'none',
-        nextEffect : 'none',
-
-        closeBtn  : false,
-        arrows    : false,
-        nextClick : true,
-
-        helpers : {
-          thumbs : {
-            width  : 50,
-            height : 50
-          }
-        }
-      });
-
-      /*
-       *  Media helper. Group items, disable animations, hide arrows, enable media and button helpers.
-      */
-      $('.fancybox-media')
-        .attr('rel', 'media-gallery')
-        .fancybox({
-          openEffect : 'none',
-          closeEffect : 'none',
-          prevEffect : 'none',
-          nextEffect : 'none',
-
-          arrows : false,
-          helpers : {
-            media : {},
-            buttons : {}
-          }
-        });
-
-      /*
-       *  Open manually
-       */
-
-      $("#fancybox-manual-a").click(function() {
-        $.fancybox.open('1_b.jpg');
-      });
-
-      $("#fancybox-manual-b").click(function() {
-        $.fancybox.open({
-          href : 'iframe.html',
-          type : 'iframe',
-          padding : 5
-        });
-      });
-
-      $("#fancybox-manual-c").click(function() {
-        $.fancybox.open([
-          {
-            href : '1_b.jpg',
-            title : 'My title'
-          }, {
-            href : '2_b.jpg',
-            title : '2nd title'
-          }, {
-            href : '3_b.jpg'
-          }
-        ], {
-          helpers : {
-            thumbs : {
-              width: 75,
-              height: 50
-            }
-          }
-        });
-      });
-
-
-    });
-  </script>
-  <style type="text/css">
-    .fancybox-custom .fancybox-skin {
-      box-shadow: 0 0 50px #222;
-    }
-  </style>
+   <script type="text/javascript">
+var desc = $('.flex-active-slide').data('desc');
+$('#contenedor').html(desc);
+   </script>
   </head>
   <body>
     <!--HEADER -->
-    <header>
+    <header><a name="menu"></a>
       <div class="container">
         <div class="top-header">
             <div class="logotipo pull-left"><a href="index.html" title=""> <img alt="" src="img/1.png" width="300" heigth="180"></a></div>
@@ -228,36 +39,35 @@
               <ul class="nav" id="navmenu">
                <li><a class="" href="index.html">Inicio</a></li>
                <li class="dropdown">
-                <a class="dropdown-toggle" data-target="#" data-toggle="dropdown" href="#">Empresa </a>
+                <a class="dropdown-toggle" data-target="#" data-toggle="dropdown" href="empresa.html">Empresa </a>
                 <ul class="dropdown-menu">
-                  <li><a href="#">Quienes somos</a></li>
-                  <li><a href="#">Misión y Visión</a></li>
+                   <li><a href="empresa.html#quien">¿Quiénes somos?</a></li>
+                  <li><a href="empresa.html#mision">Misión y Visión</a></li>
                   </ul>
                   </li>
               <li class="dropdown">
                 <a class="active dropdown-toggle" data-target="#" data-toggle="dropdown" href="#"> Minería </a>
                 <ul class="dropdown-menu">
-                  <li><a href="#">Equipo Neumatico</a></li>
-                  <li><a href="#">Acero de barrenación</a></li>
-                   <li><a href="#">Brocas</a></li>
-                    <li><a href="#">Refacciones</a></li>
-                    <li><a href="min.html">Cemento Expansivo</a></li>
+                 <li><a href="min.html#neuma">Equipo Neumático</a></li>
+                  <li><a href="min.html#cem">Cemento Expansivo</a></li>
+                   <li><a href="min.html#refa">Refacciones</a></li>
                 </ul>
                 <div class="clearfix"></div>
               </li>
               <li class="dropdown">
                 <a class="active dropdown-toggle" data-target="#" data-toggle="dropdown" href="#">Construcción </a>
                 <ul class="dropdown-menu">
-                  <li><a href="#">Equipo de compactación</a></li>
-                  <li><a href="#">Equipo de construcción</a></li>
-                  <li><a href="#">Generadores de energía</a></li>
+                  <li><a href="#compactacion">Equipo de compactación</a></li>
+                  <li><a href="#construccion">Equipo de construcción</a></li>
+                  <li><a href="#gen">Generadores de energía</a></li>
+                  <li><a href="#motob">Motomombas</a></li>
                 </ul>
                 <div class="clearfix"></div>
               </li>
               <li><a href="contacto.html" title="">Contacto</a></li>
               <li class="dropdown">
               <div class="clearfix"></div>
-              <p class="tels">TEL: 01(618)818-52-46 <br> Venta, Renta y Reparación <br>de Equipo Neumatico.</p>
+              <p class="tels">TEL: 01(618)818-52-46 <br> Venta, Renta y Reparación <br>de Equipo Neumático.</p>
               </li>
               </ul>
          </div>
@@ -266,62 +76,136 @@
           </div>
        <!-- Fin del Menu -->
      </header>
+<div class="hiddencon">
+<div class="hiddencon-label">&#9679;</div>
+<a href="#menu"><p>Regresar al menú</p></a>
+</div>
+
 
  <!--Aquí va el slider acordeón--> 
-
+<a name="compactacion">
   <section class="contenido construccion"> 
 <h3 class="tit">Equipo de Construcción. </h3>
 <h5 class="tit">Equipo de compactación.</h5>
-  </section>
-    <section class="margensec">
+  </section></a>
+     <section class="margensec">
     <div class="row">
-      <div class="span4 productos"><p>
-       <a class="fancybox-buttons" data-fancybox-group="button" href="img/comp/compactadora.jpg"> <img src="img/comp/compactadora.jpg" heigth="300" width="190"><p>Compactadora.</p></a></div>
-      <div class="span4 productos">
-        <a class="fancybox-buttons" data-fancybox-group="button" href="img/comp/placavibratoriamanual.png"><img src="img/comp/placavibratoriamanual.png" heigth="300" width="190"><p>Placa vibratoria </p></a></div>
-      <div class="span4 productos"><img src="img/comp/rodillomanual.png" heigth="400" width="290"></div>
-      <div class="span4 productos"><img src="img/comp/rodillosmanuales.png" heigth="300" width="190"></div>
-      </p>
+        <div class="span6"><div class="main-slider flexslider">
+        <ul class="slides">
+            <li data-desc="esta es una"/>
+              <img class="prodslide"alt=""  src="img/comp/slider/comp1.jpg" /> <div class="container flex-caption"><p class="infoprod">Compactadora.</p></div>
+            </li>
+            <li>
+              <img class="prodslide" alt=""  src="img/comp/slider/comp5.jpg" /> <div class="container flex-caption"><p class="infoprod">Placa vibratoria.</p></div>
+            </li>
+            <li>
+              <img class="prodslide" alt="" src="img/comp/slider/comp3.jpg" /><div class="container flex-caption"><p class="infoprod">Rodillo manual de 500kg.</p></div>
+            </li>
+            <li>
+              <img class="prodslide" alt=""  src="img/comp/slider/comp4.jpg" /><div class="container flex-caption"><p class="infoprod">Rodillo manual de 500kg.</p></div>
+            </li>
+            <li>
+              <img class="prodslide" alt=""  src="img/comp/slider/comp2.jpg" /><div class="container flex-caption"><p class="infoprod">Rodillo Vibrocompactaror hombre a bordo.</p></div>
+            </li>
+          </ul></div></div>
+      <div class="span6"><h4>Compactadoras. </h4><p>Fácil de manejar, de la mejor calidad y muy durable. Listas para desarrollar los proyectos más ambiciosos. A gasolina proporcionan una alta fuerza de impacto que los hace una excelente opción para aplanar áreas pequeñas o estrechas. </p>
     </div>
-    </section>  
+      </section>
+      <a name="construccion">
     <section class="contenido construccion"> 
 <h3 class="tit">Equipo de Construcción. </h3>
 <h5 class="tit">Equipo ligero de construcción.</h5>
-  </section>
+  </section></a>
      <section class="margensec">
     <div class="row">
-        <div class="span6"><div id="main-slider" class="flexslider">
+        <div class="span6"><h4>Equipo ligero de construcción. </h4><p>Por que sabemos las necesidades de nuestros clientes, contamos con un extenso suertido de equipo ligero de construcción que le permitirá lograr los proyectos que tiene en mente. Tenemos minicargadores, lanzadoras de concreto, cortadoras de piso, revolvedoras, rompedores eléctricos, vibradores de concreto eléctricos y de gasolina. </p></div>
+
+        <div class="span6"><div class="main-slider flexslider">
         <ul class="slides">
-            <li>
-              <img class="prodslide"alt=""  src="img/comp/slider/comp1.jpg" /> 
+           <li>
+              <img class="prodslide"alt=""  src="img/const/slider/lanzadoradeconcreto.jpg" /> <div class="container flex-caption"><p class="infoprod">Bomba lanzadora de concreto.</p></div>
             </li>
             <li>
-              <img class="prodslide" alt=""  src="img/comp/placavibratoriamanual.png" />
+              <img class="prodslide"alt=""  src="img/const/slider/cortadoradepiso.jpg" /> <div class="container flex-caption"><p class="infoprod">Cortadora de piso.</p></div>
             </li>
             <li>
-              <img class="prodslide" alt="" src="img/comp/slider/comp3.jpg" />
+              <img class="prodslide" alt=""  src="img/const/slider/minicargador.jpg" /><div class="container flex-caption"><p class="infoprod"> Minicargador Case.</p></div>
             </li>
             <li>
-              <img class="prodslide" alt=""  src="img/comp/slider/comp4.jpg" />
+              <img class="prodslide" alt="" src="img/const/slider/minicargador2.jpg" /><div class="container flex-caption"><p class="infoprod">Minicargador John Deere.</p></div>
             </li>
             <li>
-              <img class="prodslide" alt=""  src="img/comp/slider/comp2.jpg" />
+              <img class="prodslide" alt="" src="img/const/slider/revolvedora.jpg" /><div class="container flex-caption"><p class="infoprod">Revolvedora.</p></div>
+            </li>
+            <li>
+              <img class="prodslide" alt=""  src="img/const/slider/rompedorelectrico.jpg" /><div class="container flex-caption"><p class="infoprod">Rompedor eléctrico.</p></div>
+            </li>
+             <li>
+              <img class="prodslide" alt=""  src="img/const/slider/vibradoragasolina.jpg" /><div class="container flex-caption"><p class="infoprod">Vibrador de concreto con motor a gasolina.</p></div>
+            </li>
+             <li>
+              <img class="prodslide" alt=""  src="img/const/slider/vibradorelectrico.jpg" /><div class="container flex-caption"><p class="infoprod">Vibrador de concreto con motor eléctrico.</p></div>
             </li>
           </ul></div></div>
-      <div class="span6"><h4>Compactadoras. </h4><p>Fácil de manejar, de la mejor calidad y muy durable. usala para desarrollar los proyectos más ambiciosos en cuanto a construccíón se refiere, cuenta con capacidad de 50 caballos de fuerza y su motor es de gasolina. </p></div>
+      
       </section>
-
+<a name="gen">
 <section class="contenido construccion"> 
 <h3 class="tit">Equipo de Construcción. </h3>
 <h5 class="tit">Generadores de energía.</h5>
-  </section>
+  </section></a>
+<section class="margensec">
+    <div class="row">
+        <div class="span6"><div class="main-slider flexslider">
+        <ul class="slides">
+            <li>
+              <img class="prodslide"alt=""  src="img/gen/slider/gen50kva.jpg" /> <div class="container flex-caption"><p class="infoprod">Generadores trifásicos de 25,50,75 Y 150 KVA</p></div>
+            </li>
+            <li>
+             <img class="prodslide"alt=""  src="img/gen/slider/gen6500.jpg" /> <div class="container flex-caption"><p class="infoprod">Generador eléctrico de 6500 WATTS</p></div>
+            </li>
+            <li>
+             <img class="prodslide"alt=""  src="img/gen/slider/torredeiluminacion.jpg" /> <div class="container flex-caption"><p class="infoprod">Torres de iluminación.</p></div>
+            </li>
+            <li>
+              <img class="prodslide"alt=""  src="img/gen/slider/maquinadesoldar.jpg" /> <div class="container flex-caption"><p class="infoprod">Máquina de soldar de 150 a 300 AMP para soldadura 60-11 A 70-18</p></div>
+            </li>
+            </ul></div></div>
+      <div class="span6"><h4>Generadores de Energía. </h4><p>Nuestros generadores tienen potencia máxima y alta capacidad, pueden ser utilizados para alimentar motores, calentadores y aparatos eléctricos. Tenemos también poderosas soldadoras y generadores de energía, desde 125 a 500 A. </p></div>
+      </section>
+  <a name="motob">
+ <section class="contenido construccion"> 
+<h3 class="tit">Equipo de Construcción. </h3>
+<h5 class="tit">Motobombas.</h5>
+  </section></a>
+     <section class="margensec">
+    <div class="row">
+        <div class="span6"><h4>Motobombas. </h4><p>Pregunte por la variedad de motobombas que tenemos. De las mejores marcas, de gran calidad y de capacidades diferentes. </p></div>
 
-  
+        <div class="span6"><div class="main-slider flexslider">
+        <ul class="slides">
+           <li>
+              <img class="prodslide"alt=""  src="img/moto/slider/motompower.jpg" /> <div class="container flex-caption"><p class="infoprod">Motobomba de 2''.</p></div>
+            </li>
+            <li>
+             <img class="prodslide"alt=""  src="img/moto/slider/moto3x3.jpg" /> <div class="container flex-caption"><p class="infoprod">Motobomba de 3''.</p></div>
+            </li>
+            <li>
+               <img class="prodslide"alt=""  src="img/moto/slider/moto4x4.jpg" /> <div class="container flex-caption"><p class="infoprod">Motobomba de 4'' traga-sólidos.</p></div>
+            </li>
+            <li>
+               <img class="prodslide"alt=""  src="img/moto/slider/moto2x2.jpg" /> <div class="container flex-caption"><p class="infoprod">Las mejores motobombas ¡las tenemos nosotros!.</p></div>
+            </li>
+            </ul></div></div>
+      
+      </section>
+
+
 <section class="marcas"> 
-  <h4>En Neumatics Tools Tenemos las mejores marcas para ti!</h4>
+  <h4>En Neumatic's Tools ¡Tenemos las mejores marcas para ti!</h4>
   <div class="minigallery-list minigallery boxed">
                            <ul id="mycarouse3" class="jcarousel-skin-tango">
-                              <li><a href="#" rel="prettyPhoto"><img src="img/marcas/1.jpg" width="105" height="90" alt="" /></a></li>
+                                <li><a href="#" rel="prettyPhoto"><img src="img/marcas/1.jpg" width="105" height="90" alt="" /></a></li>
                                 <li><a href="#" rel="prettyPhoto"><img src="img/marcas/2.jpg" width="105" height="90" alt="" /></a></li>
                                 <li><a href="#" rel="prettyPhoto"><img src="img/marcas/3.gif" width="105" height="90" alt="" /></a></li>
                                 <li><a href="#" rel="prettyPhoto"><img src="img/marcas/4.jpg" width="105" height="90" alt="" /></a></li>
@@ -333,8 +217,16 @@
                                 <li><a href="#" rel="prettyPhoto"><img src="img/marcas/10.jpg" width="105" height="90" alt="" /></a></li>
                                 <li><a href="#" rel="prettyPhoto"><img src="img/marcas/11.jpg" width="105" height="90" alt="" /></a></li>
                                 <li><a href="#" rel="prettyPhoto"><img src="img/marcas/12.jpg" width="105" height="90" alt="" /></a></li>
-                                 <li><a href="#" rel="prettyPhoto"><img src="img/marcas/13.jpg" width="105" height="90" alt="" /></a></li>
-                                 <li><a href="#" rel="prettyPhoto"><img src="img/marcas/14.png" width="105" height="90" alt="" /></a></li>
+                                <li><a href="#" rel="prettyPhoto"><img src="img/marcas/13.jpg" width="105" height="90" alt="" /></a></li>
+                                <li><a href="#" rel="prettyPhoto"><img src="img/marcas/14.png" width="105" height="90" alt="" /></a></li>
+                                <li><a href="#" rel="prettyPhoto"><img src="img/marcas/15.png" width="105" height="90" alt="" /></a></li>
+                                <li><a href="#" rel="prettyPhoto"><img src="img/marcas/16.jpg" width="105" height="90" alt="" /></a></li>
+                                <li><a href="#" rel="prettyPhoto"><img src="img/marcas/17.jpg" width="105" height="90" alt="" /></a></li>
+                                <li><a href="#" rel="prettyPhoto"><img src="img/marcas/18.png" width="105" height="90" alt="" /></a></li>
+                                <li><a href="#" rel="prettyPhoto"><img src="img/marcas/19.jpg" width="105" height="90" alt="" /></a></li>
+                                <li><a href="#" rel="prettyPhoto"><img src="img/marcas/20.jpg" width="105" height="90" alt="" /></a></li>
+                                <li><a href="#" rel="prettyPhoto"><img src="img/marcas/21.jpg" width="105" height="90" alt="" /></a></li>
+                                <li><a href="#" rel="prettyPhoto"><img src="img/marcas/22.jpg" width="105" height="90" alt="" /></a></li>
                             </ul>
                         </div>
  </section>
@@ -353,7 +245,7 @@ CP. 34105, DURANGO, DGO.
 
 </span>
                     <span>Durango, Dgo. TEL: 01(618)818-52-46 </span>
-                    <span>&copy;NEUMATICS TOOLS Durango, Dgo. 2013</span>
+                    <span>&copy;NEUMATIC'S TOOLS Durango, Dgo. 2013</span>
       </article>
       <article>
         <p>Tambi&eacute;n puedes seguirnos en las redes sociales.</p>
@@ -366,7 +258,7 @@ CP. 34105, DURANGO, DGO.
 
   <!-- Scripts de Java -->
 
-<script src="js/jquery-1.9.0.min.js"></script>
+<script src="js/jquery-1.8.3.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/prefixfree.min.js"></script>
 <!-- NAVegación -->
@@ -401,7 +293,7 @@ CP. 34105, DURANGO, DGO.
 
 jQuery(function($){
 
-  $('#main-slider').flexslider();
+  $('.main-slider').flexslider();
 
 
 
@@ -435,7 +327,7 @@ jQuery(function($){
                 $('#mycarouse3').jcarousel({
                   easing: 'easeInOutQuint',
                   animation: 600,
-                  auto: 4
+                  auto:5
                 });
               });
                         </script>
@@ -445,8 +337,7 @@ jQuery(function($){
               });
             </script>
             
-            <!-- Galería de productos fancybox-->
- 
+            
  
 </body>
 </html>

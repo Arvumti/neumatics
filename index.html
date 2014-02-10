@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width">
-<title>NEUMATICS TOOLS</title>
-    
+<title>NEUMATIC'S TOOLS</title>
+     
   <link href="css/bootstrap.css" rel="stylesheet" media="screen">
   <link href="css/bootstrap-responsive.css" rel="stylesheet" media="screen">
   <link href="css/flexslider/flexslider.css" rel="stylesheet" media="screen">
@@ -18,14 +18,16 @@
  <!--ACORDEON ESTILOS -->
  <link rel="stylesheet" href="css/foundation.css">
  <link rel="stylesheet" type="text/css" href="css/example_4.css" />
+
+
      <!--[if lt Ie 9]>
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-    
+    <link rel="shortcut icon" href="img/mis.png">
   </head>
   <body>
     <!--HEADER -->
-    <header>
+    <header><a name="menu"></a>
       <div class="container">
         <div class="top-header">
             <div class="logotipo pull-left"><a href="index.html" title=""> <img alt="" src="img/1.png" width="300" heigth="180"></a></div>
@@ -35,36 +37,35 @@
               <ul class="nav" id="navmenu">
                <li><a class="" href="index.html">Inicio</a></li>
                <li class="dropdown">
-                <a class="dropdown-toggle" data-target="#" data-toggle="dropdown" href="#">Empresa </a>
+               <a class="dropdown-toggle" data-target="#" data-toggle="dropdown" href="empresa.html">Empresa </a>
                 <ul class="dropdown-menu">
-                  <li><a href="empresa.html">Quienes somos</a></li>
-                  <li><a href="empresa.html">Misión y Visión</a></li>
+                   <li><a href="empresa.html#quien">¿Quiénes somos?</a></li>
+                  <li><a href="empresa.html#mision">Misión y Visión</a></li>
                   </ul>
                   </li>
               <li class="dropdown">
                 <a class="active dropdown-toggle" data-target="#" data-toggle="dropdown" href="#"> Minería </a>
                 <ul class="dropdown-menu">
-                  <li><a href="min.html">Equipo Neumatico</a></li>
-                  <li><a href="min.html">Acero de barrenación</a></li>
-                   <li><a href="min.html">Brocas</a></li>
-                   <li><a href="min.html">Refacciones</a></li>
-                   <li><a href="min.html">Cemento Expansivo</a></li>
+                  <li><a href="min.html#neuma">Equipo Neumático</a></li>
+                  <li><a href="min.html#cem">Cemento Expansivo</a></li>
+                   <li><a href="min.html#refa">Refacciones</a></li>
                 </ul>
                 <div class="clearfix"></div>
               </li>
               <li class="dropdown">
                 <a class="active dropdown-toggle" data-target="#" data-toggle="dropdown" href="#">Construcción </a>
                 <ul class="dropdown-menu">
-                  <li><a href="const.html">Equipo de compactación</a></li>
-                  <li><a href="const.html">Equipo de construcción</a></li>
-                  <li><a href="const.html">Generadores de energía</a></li>
+                  <li><a href="const.html#compactacion">Equipo de compactación</a></li>
+                  <li><a href="const.html#construccion">Equipo de construcción</a></li>
+                  <li><a href="const.html#gen">Generadores de energía</a></li>
+                  <li><a href="const.html#motob">Motomombas</a></li>
                 </ul>
                 <div class="clearfix"></div>
               </li>
               <li><a href="contacto.html" title="">Contacto</a></li>
               <li class="dropdown">
               <div class="clearfix"></div>
-              <p class="tels">TEL: 01(618)818-52-46 <br> Venta, Renta y Reparación <br>de Equipo Neumatico.</p>
+              <p class="tels">TEL: 01(618)818-52-46 <br> Venta, Renta y Reparación <br>de Equipo Neumático.</p>
               </li>
               </ul>
          </div>
@@ -73,6 +74,12 @@
           </div>
        <!-- Fin del Menu -->
      </header>
+
+<div class="hiddencon">
+<div class="hiddencon-label">&#9679;</div>
+<a href="#menu"><p>Regresar al menú</p></a>
+</div>
+
 
  <!--Aquí va el slider acordeón--> 
 
@@ -83,37 +90,37 @@
         <div id="outer">
           <div class="box"> <img src="img/acordeon/comp.jpg" />
             <div class="caption_1"> <a href="#">
-              <h1>Compresores</h1>
+              <h1>Compresores.</h1>
               </a>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque non sodales odio.</p>
+              <p>Contamos con capacidades desde 185 hasta 750 PCM son prácticos y fáciles de operar.</p>
             </div>
           </div>
           <div class="box"> <img src="img/acordeon/gen.jpg" />
             <div class="caption_1"> <a href="#">
-              <h1>Generadores</h1>
+              <h1>Generadores.</h1>
               </a>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              <p>Potencia máxima y alta capacidad, pueden ser utilizados para alimentar motores, calentadores y aparatos eléctricos.</p>
             </div>
           </div>
-          <div class="box"> <img src="img/acordeon/compac.jpg" />
-            <div class="caption_1"> <a href="#">
-              <h1>Construcción</h1>
+          <div class="box"> <a href="const.html"><img src="img/acordeon/compac.jpg" /></a>
+            <div class="caption_1"> <a href="const.html">
+              <h1>Construcción.</h1>
               </a>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              <p>Contamos con gran surtido en equipo para la industria de la construcción. En Neumatic's Tools encontrarás solo las mejores marcas.</p>
             </div>
           </div>
-          <div class="box"> <img src="img/acordeon/min.jpg" />
-            <div class="caption_1"> <a href="#">
+          <div class="box"> <a href="min.html"><img src="img/acordeon/min.jpg" /> </a>
+            <div class="caption_1"> <a href="min.html">
               <h1>Minería</h1>
               </a>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              <p>Para la industria minera contamos con un gran surtido de refacciones y equipo para llevar a cabo los proyectos más ambiciosos.</p>
             </div>
           </div>
           <div class="box"> <img src="img/acordeon/mtb2.jpg" />
             <div class="caption_1"> <a href="#">
-              <h1>Bombas Neumaticas y Moto Bombas</h1>
+              <h1>Bombas Neumaticas y Moto Bombas.</h1>
               </a>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              <p>Contamos con las bombas neumáticas y motobombas de las mejores marcas. En Neumatic's Tools encontrarás bombas de todas las capacidades, algunas de las mismas permiten el paso de residuos sólidos.</p>
             </div>
           </div>
           </div>
@@ -121,28 +128,38 @@
  </div>
 </section >
   <section class="contenido"> 
-<h2>NEUMATIC TOOLS </h2>
+<h2>NEUMATICS TOOLS </h2>
 <h3>VENTA RENTA Y REPARACIÓN DE EQUIPO</h3>
 <article>
-  <p>Contamos con el mejor equipo para el desarrollo de la industria minera y de construcción. Por que sabemos que el desarrollo de tus proyectos es importante te ofrecemos una gran variedad de equipo neumatico para lleves a cabo esa importante actividad. XX años de experiencia nos respaldan, además contamos con el mejor equipo siempre listo para servirte.<br> Dejanos ayudarte, en NEUMATICS TOOLS siempre estaremos deseosos de servirte, contactanos!</p>
+  <p>Contamos con el mejor equipo para el desarrollo de la industria minera y de construcción. Por que sabemos que el desarrollo de tus proyectos es importante te ofrecemos una gran variedad de equipo neumatico para lleves a cabo esa importante actividad. XX años de experiencia nos respaldan, además contamos con el mejor equipo siempre listo para servirte.<br> Dejanos ayudarte, en NEUMATIC'S TOOLS ¡siempre estaremos deseosos de servirte, contactanos!</p>
 </article>
     </section>
 <section class="marcas"> 
-  <h4>En Neumatics Tools Tenemos las mejores marcas para ti!</h4>
+  <h4>En Neumatic's Tools ¡Tenemos las mejores marcas para ti!</h4>
   <div class="minigallery-list minigallery boxed">
-                            <ul id="mycarouse3" class="jcarousel-skin-tango">
-                              <li><a href="img/marcas/1.jpg" rel="prettyPhoto"><img src="img/marcas/1.jpg" width="105" height="90" alt="" /></a></li>
-                                <li><a href="img/marcas/2.jpg" rel="prettyPhoto"><img src="img/marcas/2.jpg" width="105" height="90" alt="" /></a></li>
-                                <li><a href="img/marcas/3.jpg" rel="prettyPhoto"><img src="img/marcas/3.gif" width="105" height="90" alt="" /></a></li>
-                                <li><a href="img/marcas/4.jpg" rel="prettyPhoto"><img src="img/marcas/4.jpg" width="105" height="90" alt="" /></a></li>
-                                <li><a href="img/marcas/5.jpg" rel="prettyPhoto"><img src="img/marcas/5.jpg" width="105" height="90" alt="" /></a></li>
-                                <li><a href="img/marcas/6.jpg" rel="prettyPhoto"><img src="img/marcas/6.jpg" width="105" height="90" alt="" /></a></li>
-                                <li><a href="img/marcas/7.jpg" rel="prettyPhoto"><img src="img/marcas/7.png" width="105" height="90" alt="" /></a></li>
-                                <li><a href="img/marcas/8.jpg" rel="prettyPhoto"><img src="img/marcas/8.jpg" width="105" height="90" alt="" /></a></li>
-                                <li><a href="img/marcas/9.jpg" rel="prettyPhoto"><img src="img/marcas/9.jpg" width="105" height="90" alt="" /></a></li>
-                                <li><a href="img/marcas/10.jpg" rel="prettyPhoto"><img src="img/marcas/10.jpg" width="105" height="90" alt="" /></a></li>
-                                <li><a href="img/marcas/11.jpg" rel="prettyPhoto"><img src="img/marcas/11.jpg" width="105" height="90" alt="" /></a></li>
-                                <li><a href="img/marcas/12.jpg" rel="prettyPhoto"><img src="img/marcas/12.jpg" width="105" height="90" alt="" /></a></li>
+                           <ul id="mycarouse3" class="jcarousel-skin-tango">
+                                <li><a href="#" rel="prettyPhoto"><img src="img/marcas/1.jpg" width="105" height="90" alt="" /></a></li>
+                                <li><a href="#" rel="prettyPhoto"><img src="img/marcas/2.jpg" width="105" height="90" alt="" /></a></li>
+                                <li><a href="#" rel="prettyPhoto"><img src="img/marcas/3.gif" width="105" height="90" alt="" /></a></li>
+                                <li><a href="#" rel="prettyPhoto"><img src="img/marcas/4.jpg" width="105" height="90" alt="" /></a></li>
+                                <li><a href="#" rel="prettyPhoto"><img src="img/marcas/5.jpg" width="105" height="90" alt="" /></a></li>
+                                <li><a href="#" rel="prettyPhoto"><img src="img/marcas/6.jpg" width="105" height="90" alt="" /></a></li>
+                                <li><a href="#" rel="prettyPhoto"><img src="img/marcas/7.png" width="105" height="90" alt="" /></a></li>
+                                <li><a href="#" rel="prettyPhoto"><img src="img/marcas/8.jpg" width="105" height="90" alt="" /></a></li>
+                                <li><a href="#" rel="prettyPhoto"><img src="img/marcas/9.jpg" width="105" height="90" alt="" /></a></li>
+                                <li><a href="#" rel="prettyPhoto"><img src="img/marcas/10.jpg" width="105" height="90" alt="" /></a></li>
+                                <li><a href="#" rel="prettyPhoto"><img src="img/marcas/11.jpg" width="105" height="90" alt="" /></a></li>
+                                <li><a href="#" rel="prettyPhoto"><img src="img/marcas/12.jpg" width="105" height="90" alt="" /></a></li>
+                                <li><a href="#" rel="prettyPhoto"><img src="img/marcas/13.jpg" width="105" height="90" alt="" /></a></li>
+                                <li><a href="#" rel="prettyPhoto"><img src="img/marcas/14.png" width="105" height="90" alt="" /></a></li>
+                                <li><a href="#" rel="prettyPhoto"><img src="img/marcas/15.png" width="105" height="90" alt="" /></a></li>
+                                <li><a href="#" rel="prettyPhoto"><img src="img/marcas/16.jpg" width="105" height="90" alt="" /></a></li>
+                                <li><a href="#" rel="prettyPhoto"><img src="img/marcas/17.jpg" width="105" height="90" alt="" /></a></li>
+                                <li><a href="#" rel="prettyPhoto"><img src="img/marcas/18.png" width="105" height="90" alt="" /></a></li>
+                                <li><a href="#" rel="prettyPhoto"><img src="img/marcas/19.jpg" width="105" height="90" alt="" /></a></li>
+                                <li><a href="#" rel="prettyPhoto"><img src="img/marcas/20.jpg" width="105" height="90" alt="" /></a></li>
+                                <li><a href="#" rel="prettyPhoto"><img src="img/marcas/21.jpg" width="105" height="90" alt="" /></a></li>
+                                <li><a href="#" rel="prettyPhoto"><img src="img/marcas/22.jpg" width="105" height="90" alt="" /></a></li>
                             </ul>
                         </div>
  </section>
@@ -161,7 +178,7 @@ CP. 34105, DURANGO, DGO.
 
 </span>
                     <span>Durango, Dgo. TEL: 01(618)818-52-46 </span>
-                    <span>&copy;NEUMATICS TOOLS Durango, Dgo. 2013</span>
+                    <span>&copy;NEUMATIC'S TOOLS Durango, Dgo. 2013</span>
         </p> 
       </article>
       <article>
@@ -224,8 +241,8 @@ CP. 34105, DURANGO, DGO.
               $(document).ready(function() {
                 $('#mycarouse3').jcarousel({
                   easing: 'easeInOutQuint',
-                  animation: 1000,
-                  auto: 1
+                  animation: 600,
+                  auto: 5
                 });
               });
                         </script>

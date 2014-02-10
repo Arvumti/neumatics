@@ -161,6 +161,9 @@ footer
 	padding: 0.2em 0;
     
 }
+.marcas h4{
+    text-align: center;
+}
 .tels{
 	font-size: 12px;
     color: #B8860B;
@@ -169,17 +172,18 @@ footer
 }
 /* PAGINA EMPRESA--------------------------------------------------------------------------------------------------------------------------*/
 .empresa {
-	
 	background-color: rgba(0, 0,0, 0.2);
 	width: 100%;
 	height: 12em;
-    padding: 1em;
+    height: auto;
 
 }
 .empresa img{
-    background: url('img/empresa.jpg');
+    max-width: 100%;
+    margin:0em 1em 0em 0em;
 	background: white;
-	height: 10em;
+	height: 27em;
+    padding: 0.2em;
 	width:100%;
 }
 #historia{
@@ -187,6 +191,12 @@ footer
 	padding: 0.2em;
 	height: auto;
 	
+}
+#quienes{
+    color: #8B4513;
+}
+.somos{
+    text-align: justify;
 }
 #mision 
 {
@@ -202,7 +212,7 @@ footer
     margin: 0.5em 1em 2em 1em;
     text-align: left;
     border-radius: 1em;
-    width: 30%; /* le dimos el ancho de 50% debido a que usamos 40% para historia pero debemos tomar en cuenta los margenes del cuerpo*/ 
+    width: 30%; /* le dimos el ancho de 50% debido a que usamos 40% */ 
 
 }
 #misimg img{ 
@@ -254,6 +264,11 @@ margin: 0;
 .margensec{
     margin: 0em 0.2em;
 }
+.margensec h3{
+color: red;
+text-decoration: underline;
+font-size: 30px;
+}
 .margensec h4{
     color:  #191970;  
     text-align: center;
@@ -278,6 +293,13 @@ margin: 0;
 .prodslide, .productos{
     display: inline-block;
 }
+.infoprod{ color: white;
+    background: rgba(69, 55, 0, 0.5);
+    text-align: left;
+    width: 49%;
+
+}
+
 /*ICONOS DE REDES SOCIALES*/
  .icon
     {
@@ -299,3 +321,84 @@ margin: 0;
     .icon-linkedin:hover {background-position:-125px -165px;}
     .icon-youtube {background-position:-325px -5px;}
     .icon-youtube:hover {background-position:-325px -165px;}
+/* PESTAÑA REGRESA MENU */
+    /* Contenedor general contenido */
+.hiddencon {
+margin: 0;
+padding: 0;
+width: 410px;
+z-index:99999;
+position: fixed;
+/* Desplazamiento para ocultar hacia la derecha
+todo el ancho del bloque menos el borde */
+right: -402px;
+top: 10px;
+opacity: .9;
+}
+.hiddencon2 {
+top: auto;
+bottom: 10px;
+}
+/* Contenido visible al hacer hover */
+.hiddencon:hover {
+right: 0;
+}
+/* Pestaña para desplegar */
+.hiddencon-label {
+margin-top: -17px;
+margin-left: -30px;
+padding: 10px;
+position: absolute;
+top: 50%;
+display: inline-block;
+color: white;
+background: #BE901B;
+font-size: 14px;
+-moz-border-radius: 20px 0 0 20px;
+-webkit-border-radius: 20px 0 0 20px;
+border-radius: 20px 0 0 20px;
+}
+.hiddencon, .hiddencon-label {
+/* Desplegado suave con transiciones */
+-moz-transition: all 0.4s ease-in-out;
+-webkit-transition: all 0.4s ease-in-out;
+transition: all 0.4s ease-in-out;
+}
+/* El contenido incluida variante para listas */
+.hiddencon p, .hiddencon ul {
+margin: 0;
+padding: 0;
+border: 8px solid #BE901B;
+border-right: 0;
+color: #fff;
+background-color: #000;
+text-align:center;
+vertical-align: center;
+-moz-border-radius: 10px 0 0 10px;
+-webkit-border-radius: 10px 0 0 10px;
+border-radius: 10px 0 0 10px;
+}
+/* Estilo para listas */
+.hiddencon ul {
+margin:0;
+overflow:auto;
+}
+.hiddencon li {
+display: block;
+}
+.hiddencon li a {
+display: block;
+padding: 10px;
+border-bottom: 1px solid #333;
+color: #ddd;
+-moz-transition: all 0.4s linear;
+-webkit-transition: all 0.4s linear;
+transition: all 0.4s linear;
+}
+.hiddencon li:last-child a{
+border-bottom: 0;
+}
+.hiddencon li a:hover {
+background-color: #333;
+text-decoration: none;
+}
