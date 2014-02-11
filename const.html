@@ -92,10 +92,13 @@ $('#contenedor').html(desc);
     <div class="row">
         <div class="span6"><div class="main-slider flexslider">
         <ul class="slides">
-            <li data-desc="esta es una"/>
-              <img class="prodslide"alt=""  src="img/comp/slider/comp1.jpg" /> <div class="container flex-caption"><p class="infoprod">Compactadora.</p></div>
+            <li data-head='Compactadora' data-desc="esta es una"/>
+                <img class="prodslide"alt=""  src="img/comp/slider/comp1.jpg" /> 
+                <div class="container flex-caption">
+                    <p class="infoprod">Compactadora.</p>
+                </div>
             </li>
-            <li>
+            <li data-head='Placa vibratoria' data-desc='esta es una placa vibradora'>
               <img class="prodslide" alt=""  src="img/comp/slider/comp5.jpg" /> <div class="container flex-caption"><p class="infoprod">Placa vibratoria.</p></div>
             </li>
             <li>
@@ -108,8 +111,10 @@ $('#contenedor').html(desc);
               <img class="prodslide" alt=""  src="img/comp/slider/comp2.jpg" /><div class="container flex-caption"><p class="infoprod">Rodillo Vibrocompactaror hombre a bordo.</p></div>
             </li>
           </ul></div></div>
-      <div class="span6"><h4>Compactadoras. </h4><p>Fácil de manejar, de la mejor calidad y muy durable. Listas para desarrollar los proyectos más ambiciosos. A gasolina proporcionan una alta fuerza de impacto que los hace una excelente opción para aplanar áreas pequeñas o estrechas. </p>
-    </div>
+        <div class="span6 info">
+          <h4>Compactadoras.</h4>
+          <p>Fácil de manejar, de la mejor calidad y muy durable. Listas para desarrollar los proyectos más ambiciosos. A gasolina proporcionan una alta fuerza de impacto que los hace una excelente opción para aplanar áreas pequeñas o estrechas. </p>
+        </div>
       </section>
       <a name="construccion">
     <section class="contenido construccion"> 
@@ -293,7 +298,18 @@ CP. 34105, DURANGO, DGO.
 
 jQuery(function($){
 
-  $('.main-slider').flexslider();
+  $('.main-slider').flexslider({
+        before: function(e) {
+            var curr = e.slides[e.currentSlide];
+            
+            var head = $(curr).data('head') || '/',
+                desc = $(curr).data('desc') || '/';
+            
+            var info = $(e).parents('section.margensec').find('.info');
+            info.children('h4').html(head);
+            info.children('p').html(desc);
+        }
+  });
 
 
 
