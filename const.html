@@ -304,17 +304,24 @@ CP. 34105, DURANGO, DGO.
 jQuery(function($){
 
   $('.main-slider').flexslider({
+        start: function(e){
+            change_item(e);
+        },
         before: function(e) {
-            var curr = e.slides[e.currentSlide];
-            
-            var head = $(curr).data('head') || '/',
-                desc = $(curr).data('desc') || '/';
-            
-            var info = $(e).parents('section.margensec').find('.info');
-            info.children('h4').html(head);
-            info.children('p').html(desc);
+            change_item(e);
         }
   });
+    
+    function change_item(e) {
+        var curr = e.slides[e.currentSlide];
+            
+        var head = $(curr).data('head') || '/',
+            desc = $(curr).data('desc') || '/';
+        
+        var info = $(e).parents('section.margensec').find('.info');
+        info.children('h4').html(head);
+        info.children('p').html(desc);
+    }
 
 
 
